@@ -38,7 +38,13 @@ app.get("/api/users/id/:id/email/:email", (req, res) => {
 })
 
 
+// app.get("/api/products", (req, res) => {
+//     res.json({ message: "Products" })
+// })
+
 
 app.get("/api/products", (req, res) => {
-    res.json({ message: "Products" })
+    const {id,name} = req.query
+    console.log(id + name)
+    res.json({ message: id })
 })
