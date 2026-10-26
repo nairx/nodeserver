@@ -30,7 +30,7 @@ app.post("/register", (req, res) => {
 app.post("/login", (req, res) => {
     const { email, password } = req.body
     const found = users.find(user => user.email === email && user.password === password)
-    if (found) {
+    if (found.email) {
         res.json({ success: true })
     }
     else {
